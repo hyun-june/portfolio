@@ -15,7 +15,7 @@ body{
 /* first-section */
 
 .first-section{
-    background-image: url(/img/main1-img.gif);
+    background-image: url(/자바스크립트-Portfolio/img/main1-img.gif);
     background-size: cover;
     height: 100vh;
     width: 100vw;

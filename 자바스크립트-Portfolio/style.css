@@ -1,0 +1,502 @@
+@font-face {
+    font-family: 'TTLaundryGothicB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'TTLaundryGothicB';
+    padding: 0;
+}
+
+/* first-section */
+
+.first-section{
+    background-image: url(/img/main1-img.gif);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.bg-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#bg-circle{
+    width: 40em;
+    height: 40em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.title{
+    position: relative;
+    top: -45rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 140px;
+    color: wheat;
+}
+
+#title-firstline{
+    position: relative;
+    bottom: 3rem;
+    right: 5rem;
+}
+
+#title-secondline{
+    position: relative;
+    top: 3rem;
+    left: 300px;
+}
+
+/* second-section */
+
+.second-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+    width: 100vw;
+    position: relative;
+    z-index: 3;
+}
+
+#profile-img-section{
+    width: 300px;
+    height: 120px;
+    border-radius: 50% 50% 40% 40%;
+    transform: skew(70deg, 0deg);
+    background-color: white;
+    position: relative;
+    left: 20rem;
+    top: 16rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.profile-inner{
+    position: relative;
+    width: 500px;
+    height: 420px;
+    border-radius: 50% 50% 30% 50%;
+    transform-origin: top left;
+    left: -19rem;
+    top: -6rem;
+    overflow: hidden;
+}
+
+#profile-img{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 3rem;
+}
+
+#profile-text{
+    width: 500px;
+    position: relative;
+    left: -25rem;
+    text-align: left;
+    padding-top: 3rem;
+}
+
+.profile-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.profile-icon:hover{
+    transform: scale(1.2);
+    transition: 0.25s;
+}
+
+/* third-section */
+
+.third-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c6dbda;
+    height: 100vh;
+    padding: 3rem 0;
+}
+
+.box-zone{
+    justify-content: space-around;
+    margin: 3rem 0 0 0;
+    width: 80vw;
+}
+
+.row{
+    padding: 0px;
+}
+
+.inner-img{
+    height: 250px;
+    width: 350px;
+    border-radius: 3%;
+}
+
+/* Modal */
+
+.modal-section{
+    position: absolute;
+    top: 10rem;
+    width: 1300px;
+    height: 500px;
+    left: -25rem;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.modal-inner{
+    display: flex;
+}
+
+.modal-inner-view{
+    margin-top: 3rem;
+    background-color: #696671;
+    padding: 10px 24px 9px 24px;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #ffffff;
+    border: none;
+}
+
+.modal-inner-view:hover{
+    background-color: #97c1a9;
+    transition: 0.7s;
+}
+
+#modal-img{
+    width: 800px;
+    height: 450px;
+}
+
+.modal-inner-right{
+    padding-left: 3rem;
+}
+
+#profile-text-title{
+    margin: 1rem ;
+}
+
+.modal-closebtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background-color: #f3a6ad;
+    padding: 8px 11px 8px 11px;
+    color: #ffffff;
+    border-top-left-radius: 5px;
+}
+
+/* side btn */
+
+.side-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    z-index: 1000;
+} 
+
+
+.side-item{
+    text-decoration: none;
+    width: 100px;
+    color: #020715;
+}
+
+.side-section .active{
+    background-color: #ecd5e3;
+    font-weight: bold;
+}
+
+
+/* mediaquery */
+
+/* 1920px 이상에서 적용할 스타일 */
+@media all and (min-width: 1921px) {
+    .title{
+        top: -53rem;
+    }
+
+    .profile-inner{
+        left: -30rem;
+    }
+
+    .inner-img{
+        width: 450px;
+        height: 300px;
+    }
+
+}
+
+/* PC , 테블릿 가로 (해상도  ~ 1023px)*/ 
+@media all and (max-width:1024px) { 
+    .title{
+        font-size: 120px;
+        top: -53rem;
+    }
+
+    #title-secondline{
+        left: 200px;
+    }
+
+    #profile-img-section{
+        left: 5rem;
+    }
+
+    #profile-text{
+        left: -10rem;
+    }
+
+    .profile-inner{
+        left: -17rem;
+        top: -5rem;
+    }
+
+    #profile-img{
+        right: 1rem;
+    }
+
+    .third-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    
+    .box-zone{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .inner-img{
+        margin-bottom: 2rem;
+    }
+
+    .modal-section{
+        height: 1100px;
+    }
+
+    .modal-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-inner-right{
+        padding: 3rem 10rem;
+    }
+
+    #modal-img{
+        width: 900px;
+        height: 700px;
+    }
+
+    .modal-closebtn {
+        right: 135px;
+    }
+
+} 
+  
+/* 테블릿 세로 (해상도  ~ 1023px)*/ 
+@media all and (max-width:820px) { 
+    .title{
+        font-size: 85px;
+        top: -45rem;
+        left: -1rem;
+    }
+
+    #profile-img-section{
+        left: 3rem;
+    }
+
+    #profile-text{
+        left: -6rem;
+    }
+
+    .profile-inner{
+        left: -12rem;
+        top: -5rem;
+    }
+
+    #profile-img{
+        right: 6rem;
+    }
+
+    .box-zone{
+        padding-right: 6rem;
+    }
+
+    .inner-img{
+        margin-bottom: 2rem;
+    }
+
+    .modal-section{
+        height: 1000px;
+        top: 3rem;
+    }
+
+    .modal-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-inner-right{
+        padding: 3rem 10rem;
+        width: 1000px;
+    }
+
+    #modal-img{
+        width: 700px;
+        height: 500px;
+    }
+
+    .modal-closebtn {
+        right: 240px;
+    }
+
+} 
+  
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 767px)*/ 
+@media all and (max-width:768px) {
+    .title{
+        font-size: 80px;
+        top: -40rem;
+    }
+
+    .modal-section{
+        height: 850px;
+        top: 3rem;
+    }
+
+    .modal-closebtn {
+        right: 265px;
+    }
+
+} 
+  
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
+@media all and (max-width:430px) {
+
+    html{
+        overflow-x: hidden;
+    }
+
+    .first-section{
+        height: 100vh;
+        width: 430px;
+    }
+
+    .title{
+        font-size: 40px;
+        top: -35rem;
+    }
+
+    #title-firstline{
+        position: relative;
+        right: 2rem;
+        top: 1rem;
+    }
+
+    #title-secondline{
+        position: relative;
+        top: 3rem;
+        left: 7rem;
+    }
+
+    #bg-circle{
+        width: 20em;
+        height: 20em;
+    }
+
+    .side-section{
+        top: 20%;
+        z-index: 1000;
+    } 
+
+    .second-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #profile-img-section{
+        display: none;
+    }
+
+    .profile-inner{
+        left: 2rem;
+        overflow: visible;
+    }
+
+    #profile-text-title{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    #profile-text{
+        font-size: 18px;
+        padding: 0rem 2rem;
+        padding-left: 10rem;
+    }
+
+    .third-section{
+        padding-right: 2rem;
+    }
+
+    .box-zone{
+        text-align: center;
+    }
+
+    .modal-section{
+        position: absolute;
+        width: 300px;
+        height: 500px;
+        left: 4rem;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    #modal-img{
+        width: 280px;
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+
+    .modal-inner-right{
+        width: 300px;
+        padding: 1rem;
+        font-size: 10px;
+    }
+
+    .modal-inner-right>h3{
+        font-size: 20px;
+    }
+
+
+    #profile-text-title{
+        font-size: 10px;
+    }
+
+    .modal-closebtn {
+        bottom: 0;
+        right: 0;
+    }
+}

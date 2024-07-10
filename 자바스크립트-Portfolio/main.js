@@ -44,7 +44,7 @@ const render = () =>{
                                         class="modal-inner-view">VIEW WEBSITE</button></a>
                             </div>
                         </div>
-                        <button class="modal-closebtn">X</button>
+                        <button class="modal-closebtn" onclick="closeModal(${index})">X</button>
                     </div>
                 </div>
             </div>
@@ -57,6 +57,11 @@ const render = () =>{
 const openModal = (index) => {
     let myModal = new bootstrap.Modal(document.getElementById(`modal${index}`));
     myModal.show();
+}
+
+const closeModal = (index) => {
+    let myModal = bootstrap.Modal.getInstance(document.getElementById(`modal${index}`));
+    myModal.hide();
 }
 
 

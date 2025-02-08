@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+.cover-container {
+  position: fixed;
+  z-index: 10000;
+  height: 100vh;
+  width: 100vw;
+  background-color: #333333;
+}
+
+.cover-canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.cover-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.scale-up {
+  transform: translate(-50%, -50%) scale(1.5);
+}

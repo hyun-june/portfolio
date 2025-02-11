@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Cover.css";
 
-const interval = 1000 / 60; // 초당 60프레임 (FPS)으로 애니메이션을 렌더링하기 위한 간격 설정
+const interval = 1000 / 60; // 퍼지는 속도
 
 const Cover = () => {
-  // 캔버스를 참조하는 ref
   const canvasRef = useRef(null);
-  // 파티클이 배치되었는지 여부를 추적하는 상태
   const [isPlacedParticle, setIsPlacedParticle] = useState(false);
-  // 로딩이 끝났는지 여부를 추적하는 상태
   const [isFinishMainLoading, setIsFinishMainLoading] = useState(false);
 
   // 캔버스 초기화
@@ -91,6 +89,8 @@ const Cover = () => {
     requestAnimationFrame(frame); // 애니메이션 시작
   };
 
+  const navigate = useNavigate();
+
   // 컴포넌트가 처음 마운트 될 때 캔버스를 초기화하고 애니메이션을 시작
   useEffect(() => {
     const ctx = canvasRef.current?.getContext("2d");
@@ -106,10 +106,13 @@ const Cover = () => {
   }, []);
 
   // 로딩이 끝났으면 화면을 숨김
-  if (isFinishMainLoading) return null;
+  if (isFinishMainLoading) {
+    navigate("/home");
+    return null;
+  }
 
   // 랜덤한 숫자를 반환하는 함수
-  const randomNumBetween = (min, max) => {
+  const randomNum = (min, max) => {
     return Math.random() * (max - min) + min;
   };
 
@@ -117,12 +120,12 @@ const Cover = () => {
   class Particle {
     constructor(angle) {
       // 파티클 속성 초기화
-      this.rFriction = randomNumBetween(0.95, 1.01);
-      this.rAlpha = randomNumBetween(0, 5);
+      this.rFriction = randomNum(0.95, 1.01);
+      this.rAlpha = randomNum(0, 5);
       this.r = Math.min(window.innerHeight, window.innerWidth) / 2.5;
 
-      this.angleFriction = randomNumBetween(0.97, 0.99);
-      this.angleAlpha = randomNumBetween(1, 2);
+      this.angleFriction = randomNum(0.97, 0.99);
+      this.angleAlpha = randomNum(1, 2);
       this.angle = angle - 90; // 12시 방향부터 시작하도록
       this.x =
         window.innerWidth / 2 + this.r * Math.cos((Math.PI / 180) * this.angle); // 파티클의 x 좌표

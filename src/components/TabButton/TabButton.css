@@ -1,0 +1,31 @@
+.tab_box {
+  padding: 0.5em 0em;
+
+  cursor: pointer;
+  position: relative;
+  color: var(--color-gray);
+}
+
+.tab_box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 0.5em 0em;
+  border-bottom: 1px solid var(--text-black);
+  color: var(--text-black);
+  max-width: 0;
+  transition: max-width 0.5s;
+  content: attr(data-hover);
+  text-wrap: nowrap;
+}
+
+.tab_box:hover:before,
+.tab_box:focus:before {
+  max-width: 100%;
+}
+
+.current {
+  color: var(--text-black);
+  border-bottom: 1px solid var(--text-black);
+}

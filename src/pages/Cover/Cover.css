@@ -18,7 +18,7 @@ body {
 .cover-text {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
   font-size: 3rem;

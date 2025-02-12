@@ -11,7 +11,7 @@ const Layout = () => {
     <div className="layout">
       <nav className="layout_nav">
         <h3>Lee</h3>
-        <div>
+        <div className="tab_list">
           {tabList.map((item) => (
             <span>
               <TabButton

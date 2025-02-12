@@ -1,3 +1,69 @@
-div {
-  color: var(--main-text);
+.main_container {
+  display: flex;
+  height: 100%;
+  padding-left: 20em;
+  & img {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.main_imgbox {
+  display: flex;
+  align-items: center;
+}
+
+.main_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 1.2px;
+  gap: 2em;
+
+  & h1 {
+    font-size: 4em;
+  }
+
+  & span:first-of-type {
+    border: 2px solid var(--color-pink);
+    width: 100px;
+  }
+}
+
+.sub_title {
+  display: flex;
+  font-size: 2em;
+  position: relative;
+}
+
+.text_item {
+  opacity: 0;
+  transition: 1s;
+  transform-origin: 50% 100%;
+  font-weight: bold;
+  position: absolute;
+  left: 4.3em;
+}
+
+.active {
+  opacity: 1;
+  transform: rotateX(0deg);
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: rotateX(-180deg);
+}
+
+.git_icon {
+  font-size: 2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.git_icon:hover {
+  color: var(--color-pink);
+  transform: scale(1.2);
 }

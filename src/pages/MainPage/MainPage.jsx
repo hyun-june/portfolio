@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoLogoFigma } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 
 import "./MainPage.css";
@@ -34,9 +35,20 @@ const MainPage = () => {
             </p>
           ))}
         </div>
-        <span>
-          <a href="https://github.com/hyun-june" target="_blank">
+        <span className="icons_box">
+          <a
+            href="https://github.com/hyun-june"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FaGithub className="git_icon" />
+          </a>
+          <a
+            href="https://github.com/hyun-june"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <IoLogoFigma className="git_icon" />
           </a>
         </span>
       </div>

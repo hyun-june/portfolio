@@ -1,7 +1,8 @@
 .main_container {
   display: flex;
   height: 100%;
-  padding-left: 20em;
+  padding-left: 10em;
+
   & img {
     width: 600px;
     height: 600px;
@@ -55,6 +56,11 @@
   visibility: hidden;
   opacity: 0;
   transform: rotateX(-180deg);
+}
+
+.icons_box {
+  display: flex;
+  gap: 1em;
 }
 
 .git_icon {

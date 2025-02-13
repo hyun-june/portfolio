@@ -2,15 +2,15 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+}
 
-  & nav {
-    background-color: var(--color-pink);
-    height: 4em;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    align-items: center;
-  }
+.layout_nav {
+  background-color: var(--color-pink);
+  height: 4em;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
 }
 
 .tab_list {
@@ -21,5 +21,5 @@
 main {
   flex: 1;
   background-color: var(--color-ivory);
-  padding: 1em;
+  padding: 10em;
 }

@@ -1,0 +1,29 @@
+.dot_navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: fixed;
+  top: 50%;
+  right: 20px;
+}
+
+.dot_item {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--color-pink);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  & span {
+    display: none;
+  }
+}
+
+.dot_item:hover {
+  transform: scale(1.2);
+
+  & span {
+    display: block;
+  }
+}

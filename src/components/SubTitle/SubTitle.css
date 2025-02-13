@@ -1,0 +1,13 @@
+.subTitle {
+  position: relative;
+}
+
+.subTitle::after {
+  content: "";
+  width: 10em;
+  height: 2px;
+  background-color: var(--color-gray);
+  position: absolute;
+  top: 15px;
+  margin-left: 0.6em;
+}

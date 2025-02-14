@@ -1,32 +1,11 @@
-import { Outlet, useLocation } from "react-router-dom";
-import TabButton from "../TabButton/TabButton";
+import { Outlet } from "react-router-dom";
 import "./Layout.css";
-
-const tabList = ["Home", "About", "Skills", "Projects"];
+import Navigation from "./../Navigation/Navigation";
 
 const Layout = () => {
-  const location = useLocation();
-
   return (
     <div className="layout">
-      <nav className="layout_nav">
-        <h3>Lee</h3>
-        <div className="tab_list">
-          {tabList.map((item) => (
-            <span>
-              <TabButton
-                className={
-                  location.pathname === `/${item.toLocaleLowerCase()}`
-                    ? "current"
-                    : ""
-                }
-                item={item}
-              />
-            </span>
-          ))}
-        </div>
-      </nav>
-
+      <Navigation />
       <main>
         <Outlet />
       </main>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { IoLogoFigma } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
-
 import "./MainPage.css";
 
 const texts = ["Developer", "Newcomer", "Thinker"];
@@ -29,7 +28,7 @@ const MainPage = () => {
           {texts.map((text, i) => (
             <p
               key={i}
-              className={`text_item ${i === index ? "active" : "hidden"}`}
+              className={`text_item ${i === index ? "visible" : "hidden"}`}
             >
               {text}
             </p>

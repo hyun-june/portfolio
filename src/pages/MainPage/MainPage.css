@@ -1,7 +1,7 @@
 .main_container {
   display: flex;
   height: 100%;
-  padding-left: 10em;
+  margin-left: 15em;
 
   & img {
     width: 600px;
@@ -46,7 +46,7 @@
   left: 4.3em;
 }
 
-.active {
+.visible {
   opacity: 1;
   transform: rotateX(0deg);
   visibility: visible;

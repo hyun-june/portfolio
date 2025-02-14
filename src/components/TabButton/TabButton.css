@@ -24,8 +24,3 @@
 .tab_box:focus:before {
   max-width: 100%;
 }
-
-.current {
-  color: var(--text-black);
-  border-bottom: 1px solid var(--text-black);
-}

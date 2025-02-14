@@ -1,0 +1,18 @@
+.nav_section {
+  background-color: var(--color-pink);
+  height: 4em;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+}
+
+.tab_list {
+  display: flex;
+  gap: 2em;
+}
+
+.current {
+  color: var(--text-black);
+  border-bottom: 1px solid var(--text-black);
+}

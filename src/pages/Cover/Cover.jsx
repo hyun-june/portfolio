@@ -107,7 +107,7 @@ const Cover = () => {
 
   // 로딩이 끝났으면 화면을 숨김
   if (isFinishMainLoading) {
-    navigate("/home");
+    navigate("/Home");
     return null;
   }
 

@@ -15,10 +15,12 @@
   padding: 1em;
 
   & h4 {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
   }
 
   & p {
     padding-left: 0.5em;
+    font-weight: bold;
   }
 }

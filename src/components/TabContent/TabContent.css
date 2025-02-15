@@ -7,3 +7,7 @@
     margin-bottom: 1em;
   }
 }
+
+.content_category {
+  color: var(--color-pink);
+}

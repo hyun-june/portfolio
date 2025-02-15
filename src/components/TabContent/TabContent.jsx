@@ -1,5 +1,5 @@
-import "./TabContent.css";
 import TabInner from "./components/TabInner/TabInner";
+import "./TabContent.css";
 
 const tabItems = [
   {
@@ -80,7 +80,7 @@ const TabContent = ({ title }) => {
   return (
     <div className="content_section">
       <h2>
-        Skill Stack <span>@{title}</span>
+        Skill Stack <span className="content_category">@{title}</span>
       </h2>
       <ul>
         {category

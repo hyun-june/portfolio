@@ -5,9 +5,16 @@
   & img {
     width: 100px;
     height: 100px;
-    border: 5px double gray;
+    border: 10px double var(--color-pink);
     border-radius: 50%;
+    object-fit: contain;
   }
+}
+
+.content_icon {
+  width: 100px;
+  height: 100px;
+  font-size: 2em;
 }
 
 .inner_text {

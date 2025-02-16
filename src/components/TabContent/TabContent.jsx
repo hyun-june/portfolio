@@ -3,27 +3,32 @@ import "./TabContent.css";
 
 const tabItems = [
   {
-    category: "Language",
-    items: [
-      {
-        img: "https://w7.pngwing.com/pngs/5/56/png-transparent-website-development-html5-logo-world-wide-web-consortium-world-wide-web-angle-web-design-text-thumbnail.png",
-        title: "HTML5",
-        text: "• 기본적인 HTML 태그를 사용할 수 있습니다.",
-      },
-    ],
-  },
-  {
     category: "Frontend",
     items: [
       {
-        img: "",
-        title: "",
-        text: "•",
+        img: "https://img.icons8.com/?size=100&id=20909&format=png&color=000000",
+        title: "HTML5",
+        text: "• 기본적인 HTML 태그를 사용할 수 있습니다.",
       },
       {
-        img: "",
-        title: "",
-        text: "•",
+        img: "https://img.icons8.com/?size=100&id=21278&format=png&color=000000",
+        title: "CSS3",
+        text: "",
+      },
+      {
+        img: "https://img.icons8.com/?size=100&id=108784&format=png&color=000000",
+        title: "JavaScript",
+        text: "",
+      },
+      {
+        img: "https://img.icons8.com/?size=100&id=123603&format=png&color=000000",
+        title: "React",
+        text: "",
+      },
+      {
+        img: "https://img.icons8.com/?size=100&id=yUdJlcKanVbh&format=png&color=000000",
+        title: "Next.js",
+        text: "",
       },
     ],
   },
@@ -31,13 +36,13 @@ const tabItems = [
     category: "BackEnd",
     items: [
       {
-        img: "",
-        title: "",
+        img: "https://img.icons8.com/?size=100&id=54087&format=png&color=000000",
+        title: "Node.js",
         text: "•",
       },
       {
-        img: "",
-        title: "",
+        img: "https://img.icons8.com/?size=100&id=kg46nzoJrmTR&format=png&color=000000",
+        title: "Express.js",
         text: "•",
       },
     ],
@@ -46,28 +51,29 @@ const tabItems = [
     category: "Database",
     items: [
       {
-        img: "",
-        title: "",
-        text: "•",
-      },
-      {
-        img: "",
-        title: "",
+        img: "https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000",
+        title: "MongoDB",
         text: "•",
       },
     ],
   },
+
   {
     category: "ETC",
     items: [
       {
-        img: "",
-        title: "",
+        img: "https://img.icons8.com/?size=100&id=62856&format=png&color=000000",
+        title: "Github",
         text: "•",
       },
       {
-        img: "",
-        title: "",
+        img: "https://img.icons8.com/?size=100&id=GflC6KLkdd0Y&format=png&color=000000",
+        title: "Figma",
+        text: "•",
+      },
+      {
+        img: "https://img.icons8.com/?size=100&id=KIcFwp9MNQL5&format=png&color=000000",
+        title: "Postman",
         text: "•",
       },
     ],

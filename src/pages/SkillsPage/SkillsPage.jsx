@@ -5,7 +5,6 @@ import TabContent from "../../components/TabContent/TabContent";
 import "./SkillsPage.css";
 
 const TabData = [
-  { title: "Language", content: <TabContent title="Language" /> },
   { title: "Frontend", content: <TabContent title="Frontend" /> },
   { title: "BackEnd", content: <TabContent title="BackEnd" /> },
   { title: "Database", content: <TabContent title="Database" /> },
@@ -35,7 +34,7 @@ const SkillsPage = () => {
 
             <span
               className="tab_line"
-              style={{ top: `${activeTab * 38}px` }}
+              style={{ top: `${activeTab * 37}px` }}
             ></span>
           </ul>
         </div>

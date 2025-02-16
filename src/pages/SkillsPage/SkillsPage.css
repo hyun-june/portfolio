@@ -24,7 +24,7 @@
 .skills_tab::before {
   content: "";
   width: 3px;
-  height: 178px;
+  height: 135px;
   background-color: var(--color-pink);
   opacity: 0.3;
   position: absolute;

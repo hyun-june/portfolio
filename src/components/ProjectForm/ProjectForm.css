@@ -2,13 +2,13 @@
   margin-top: 5em;
   display: flex;
   justify-content: center;
+  color: var(--text-gray);
 }
 
 .project_inner {
   display: flex;
   justify-content: center;
   max-height: 500px;
-  width: 1000px;
 }
 
 .reverse {
@@ -41,17 +41,20 @@
 
   & h4 {
     font-size: 2em;
+    color: var(--text-cream);
   }
 }
 
 .project_description {
-  background-color: #d4d7d4;
+  background-color: var(--color-pink);
   border-radius: 5px;
   padding: 1em;
   width: 450px;
   z-index: 2;
   font-size: 1.2em;
   line-height: 1.2em;
+  color: var(--color-purple);
+  position: relative;
 }
 
 .project_skills {
@@ -69,6 +72,10 @@
   gap: 1em;
 }
 
+.project_icons a:hover {
+  color: var(--color-pink);
+}
+
 .project_img {
   z-index: 1;
   border-radius: 5px;
@@ -76,18 +83,20 @@
   justify-content: center;
   position: relative;
   flex: 1;
+
   & img {
     max-width: 500px;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 
 .project_img::before {
   content: "";
-  background-color: #333333;
-  opacity: 0.3;
+  background-color: var(--color-pink);
+  opacity: 0.5;
+  max-width: 500px;
   width: 100%;
   height: 100%;
   border-radius: 5px;

@@ -1,14 +1,57 @@
 @import "./reset.css";
 
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --color-pink: #d8aaab;
   --color-ivory: #e3e6e3;
   --color-gray: #7a7a7a;
+  --color-purple: #4e4c67;
   --text-black: #333333;
+  --text-cream: #f8f6f5;
+  --text-gray: #c7c3d1;
 }
 
-#container {
-  display: flex;
-  flex-direction: column;
-  /* height: 100dvh; */
+body {
+  font-family: "S-CoreDream-3Light";
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+
+  80% {
+    width: 100%;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

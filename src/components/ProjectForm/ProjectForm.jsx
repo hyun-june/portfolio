@@ -1,6 +1,5 @@
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
-
 import "./ProjectForm.css";
 
 const ProjectForm = ({ ...props }) => {
@@ -27,7 +26,7 @@ const ProjectForm = ({ ...props }) => {
           </div>
         </div>
         <div className="project_img">
-          <img src="/images/캐릭터.png" alt="" />
+          <img src={props.img} alt="" />
         </div>
       </div>
     </div>

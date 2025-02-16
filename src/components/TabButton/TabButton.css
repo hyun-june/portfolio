@@ -3,7 +3,7 @@
 
   cursor: pointer;
   position: relative;
-  color: var(--color-gray);
+  color: var(--text-gray);
 }
 
 .tab_box::before {
@@ -12,8 +12,8 @@
   left: 0;
   overflow: hidden;
   padding: 0.5em 0em;
-  border-bottom: 1px solid var(--text-black);
-  color: var(--text-black);
+  border-bottom: 1px solid var(--color-pink);
+  color: var(--color-pink);
   max-width: 0;
   transition: max-width 0.5s;
   content: attr(data-hover);

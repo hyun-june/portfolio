@@ -6,11 +6,14 @@ const tabList = ["Home", "About", "Skills", "Projects"];
 
 const Navigation = () => {
   const location = useLocation();
-  console.log(location);
+
   return (
     <div>
       <nav className="nav_section">
-        <h3>Lee</h3>
+        <div className="logo">
+          <a href="/">HJ</a>
+        </div>
+
         <div className="tab_list">
           {tabList.map((item) => (
             <span>

@@ -1,6 +1,5 @@
 .skills_section {
   height: 100%;
-  padding: 10em;
 }
 
 .skills_inner {
@@ -8,6 +7,7 @@
   height: 100%;
   margin-top: 2em;
   gap: 2em;
+  padding-left: 2em;
 }
 
 .skills_tab {
@@ -18,12 +18,13 @@
   list-style: none;
   height: 100%;
   position: relative;
+  font-size: 1.2em;
 }
 
 .skills_tab::before {
   content: "";
   width: 3px;
-  height: 150px;
+  height: 178px;
   background-color: var(--color-pink);
   opacity: 0.3;
   position: absolute;
@@ -32,7 +33,7 @@
 }
 
 .skills_tab_title {
-  color: var(--text-black);
+  color: var(--text-gray);
   opacity: 0.3;
 }
 

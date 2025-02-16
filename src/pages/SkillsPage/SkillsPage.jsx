@@ -35,7 +35,7 @@ const SkillsPage = () => {
 
             <span
               className="tab_line"
-              style={{ top: `${activeTab * 30}px` }}
+              style={{ top: `${activeTab * 38}px` }}
             ></span>
           </ul>
         </div>

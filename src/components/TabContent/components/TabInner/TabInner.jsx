@@ -9,7 +9,7 @@ const TabInner = ({ ...props }) => {
 
         <div className="inner_text">
           <h4>{title}</h4>
-          <p>{text}</p>
+          <p>• {text}</p>
         </div>
       </li>
     </div>

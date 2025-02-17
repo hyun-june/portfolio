@@ -3,22 +3,14 @@
   margin-bottom: 1em;
 
   & img {
-    width: 100px;
-    height: 100px;
-    border: 10px double var(--color-pink);
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: contain;
   }
 }
 
-.content_icon {
-  width: 100px;
-  height: 100px;
-  font-size: 2em;
-}
-
 .inner_text {
-  width: 90%;
   padding: 1em;
 
   & h4 {

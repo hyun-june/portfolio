@@ -1,11 +1,5 @@
-.skills_section {
-  height: 100%;
-}
-
 .skills_inner {
   display: flex;
-  height: 100%;
-  margin-top: 2em;
   gap: 2em;
   padding-left: 2em;
 }
@@ -16,7 +10,6 @@
   padding-left: 1em;
   gap: 1em;
   list-style: none;
-  height: 100%;
   position: relative;
   font-size: 1.2em;
 }
@@ -54,5 +47,4 @@
 
 .tab_content {
   flex: 1;
-  height: 100%;
 }

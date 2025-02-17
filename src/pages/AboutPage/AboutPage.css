@@ -1,6 +1,6 @@
 .about_info {
   display: flex;
-  margin-top: 3em;
+  padding-top: 3em;
   padding-left: 5em;
   gap: 2em;
 }

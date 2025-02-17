@@ -1,11 +1,12 @@
 .main_container {
   display: flex;
-
+  justify-content: center;
+  margin-top: 5em;
   height: 100%;
 
   & img {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
   }
 }
 

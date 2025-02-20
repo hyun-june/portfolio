@@ -40,32 +40,37 @@ const ProjectForm = ({ ...props }) => {
           </ul>
 
           <div className="project_icons">
-            <a href={git}>
+            <a href={git} target="blank">
               <FaGithub />
             </a>
-            <a href={link}>
+            <a href={link} target="blank">
               <GoLinkExternal />
             </a>
-          </div>
-          <div>
-            <button onClick={() => setIsOpen(!isOpen)}>상세보기</button>
-            {isOpen && (
-              <div className="project_modal">
-                <iframe
-                  src={src}
-                  width="100%"
-                  height="800"
-                  onLoad={() => setIsIframeLoading(true)}
-                />
-                {isIframeLoading && (
-                  <button onClick={() => setIsOpen(false)}>X</button>
-                )}
-              </div>
-            )}
+            <div>
+              <button className="modal_btn" onClick={() => setIsOpen(!isOpen)}>
+                상세보기
+              </button>
+              {isOpen && (
+                <div className="project_modal">
+                  <iframe
+                    src={src}
+                    width="100%"
+                    height="800"
+                    onLoad={() => setIsIframeLoading(true)}
+                  />
+
+                  {isIframeLoading && (
+                    <button onClick={() => setIsOpen(false)}>X</button>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <div className="project_img">
-          <img src={img} alt="" />
+          <a href={link} target="blank">
+            <img src={img} alt="" />
+          </a>
         </div>
       </div>
     </div>

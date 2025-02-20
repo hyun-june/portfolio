@@ -13,6 +13,7 @@
 
 .reverse {
   flex-direction: row-reverse;
+  text-align: right;
 
   & h4 {
     text-align: right;
@@ -46,15 +47,16 @@
 }
 
 .project_description {
-  background-color: var(--color-pink);
+  background-color: #3f3d56;
   border-radius: 5px;
   padding: 1em;
   width: 450px;
   z-index: 2;
   font-size: 1.2em;
   line-height: 1.2em;
-  color: var(--color-purple);
+  color: var(--text-cream);
   position: relative;
+  white-space: pre-line;
 }
 
 .project_skills {
@@ -62,8 +64,7 @@
   display: flex;
   white-space: wrap;
   flex-wrap: wrap;
-  gap: 0.5em;
-  font-size: 1.4em;
+  gap: 1em;
 }
 
 .project_icons {
@@ -83,18 +84,20 @@
   justify-content: center;
   position: relative;
   flex: 1;
+  cursor: pointer;
 
   & img {
     max-width: 500px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
   }
 }
 
 .project_img::before {
   content: "";
-  background-color: var(--color-pink);
+  background-color: var(--color-purple);
   opacity: 0.5;
   max-width: 500px;
   width: 100%;
@@ -103,6 +106,7 @@
   position: absolute;
   top: 0;
   transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .project_img:hover::before {
@@ -113,6 +117,7 @@
   position: absolute;
   z-index: 999;
   top: 10%;
+  left: 25%;
   width: 1000px;
 
   & button {
@@ -123,4 +128,40 @@
     cursor: pointer;
     font-size: 1.5em;
   }
+}
+
+.modal_btn {
+  border: 1px solid var(--color-pink);
+  padding: 0.5em;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.modal_btn:hover {
+  /* transform: translate(-10px, -10px);
+  box-shadow: 5px 5px var(--color-pink); */
+  color: var(--text-cream);
+}
+
+.modal_btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-pink);
+  transition: all 0.3s ease;
+  color: white;
+  z-index: -1;
+}
+
+.modal_btn:hover::after {
+  left: 0;
+  width: 100%;
+  background-color: var(--color-pink);
 }

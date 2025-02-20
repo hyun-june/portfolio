@@ -15,8 +15,8 @@ const Navigation = () => {
         </div>
 
         <div className="tab_list">
-          {tabList.map((item) => (
-            <span>
+          {tabList.map((item, index) => (
+            <span key={index}>
               <TabButton
                 className={location.pathname === `/${item}` ? "current" : ""}
                 item={item}

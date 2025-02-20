@@ -81,7 +81,7 @@ const tabItems = [
 
 const TabContent = ({ title }) => {
   const category = tabItems.find((item) => item.category === title);
-  console.log(category);
+
   return (
     <div className="content_section">
       <h2>

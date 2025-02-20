@@ -16,7 +16,9 @@ const Card = ({ ...props }) => {
         </div>
         <h6>Use Skills</h6>
         <ul>
-          {props.skills ? props.skills.map((item) => <li>{item}</li>) : ""}
+          {props.skills
+            ? props.skills.map((item, index) => <li key={index}>{item}</li>)
+            : ""}
         </ul>
         <div className="inner_icons">
           <a href={props.git}>

@@ -12,6 +12,7 @@ const ProjectsData = [
     img: "https://library.gabia.com/wp-content/uploads/2016/04/wix%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80-1.png",
     git: "https://react-icons.github.io/react-icons/search/#q=link",
     link: "http://localhost:3000",
+    src: "https://daily-creator-da3.notion.site/ebd/13bd357c34288018a2daf447fe2680c2",
   },
   {
     title: "test2",
@@ -58,6 +59,7 @@ const ProjectsPage = () => {
             git={project.git}
             link={project.link}
             type={index % 2 === 0 ? "" : "reverse"}
+            src={project.src}
           />
         ))}
       </div>

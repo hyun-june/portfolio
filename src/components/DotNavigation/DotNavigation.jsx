@@ -5,7 +5,6 @@ const dotList = ["Home", "About", "Skills", "Projects"];
 
 const DotNavigation = () => {
   const location = useLocation();
-  console.log("ll", location);
 
   return (
     <nav className="dot_navigation">

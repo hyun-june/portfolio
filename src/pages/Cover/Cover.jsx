@@ -100,9 +100,7 @@ const Cover = () => {
     initCanvas(canvasRef.current); // 캔버스 초기화
     canvasRender(ctx); // 애니메이션 시작
 
-    return () => {
-      console.log("unmount"); // 컴포넌트가 언마운트될 때 호출 (정리 작업)
-    };
+    return () => {};
   }, []);
 
   // 로딩이 끝났으면 화면을 숨김

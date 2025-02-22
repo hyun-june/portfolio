@@ -1,34 +1,30 @@
-import { FaGithub } from "react-icons/fa";
-import { GoLinkExternal } from "react-icons/go";
+import { CiFolderOn } from "react-icons/ci";
+
 import "./Card.css";
 
 const Card = ({ ...props }) => {
   return (
     <div className="card">
-      <div className="card_img">
-        <img src={props.img} alt="" />
-      </div>
+      <a href={props.site} target="blank">
+        <div className="card_main">
+          <div className="card_title">
+            <CiFolderOn className="folder_icon" />
+            <h3>{props.title}</h3>
+          </div>
 
-      <div className="card_inner">
-        <h6>{props.title}</h6>
-        <div>
           <p>{props.description}</p>
+
+          <ul>
+            {props.skills
+              ? props.skills.map((item, index) => <li key={index}>{item}</li>)
+              : ""}
+          </ul>
         </div>
-        <h6>Use Skills</h6>
-        <ul>
-          {props.skills
-            ? props.skills.map((item, index) => <li key={index}>{item}</li>)
-            : ""}
-        </ul>
-        <div className="inner_icons">
-          <a href={props.git}>
-            <FaGithub />
-          </a>
-          <a href={props.link}>
-            <GoLinkExternal />
-          </a>
+
+        <div className="card_img">
+          <img src={props.img} alt="" />
         </div>
-      </div>
+      </a>
     </div>
   );
 };

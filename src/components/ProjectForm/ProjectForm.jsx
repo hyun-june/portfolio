@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
+import { FaFigma } from "react-icons/fa";
+import { IoIosClose } from "react-icons/io";
 import "./ProjectForm.css";
 
 const ProjectForm = ({ ...props }) => {
-  const { title, type, description, skills, git, link, img, src } = props;
-  const [isIframeLoading, setIsIframeLoading] = useState(false);
+  const { title, type, description, skills, git, link, img, src, site, figma } =
+    props;
+
+  const [isIframeLoading, setIsIframeLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const backgroundRef = useRef();
 
@@ -15,6 +19,7 @@ const ProjectForm = ({ ...props }) => {
       !backgroundRef.current.contains(event.target)
     ) {
       setIsOpen(false);
+      setIsIframeLoading(true);
     }
   };
 
@@ -43,25 +48,29 @@ const ProjectForm = ({ ...props }) => {
             <a href={git} target="blank">
               <FaGithub />
             </a>
-            <a href={link} target="blank">
+            <a href={site} target="blank">
               <GoLinkExternal />
             </a>
+            <a href={figma} target="blank">
+              <FaFigma />
+            </a>
             <div>
-              <button className="modal_btn" onClick={() => setIsOpen(!isOpen)}>
+              <button className="modal_btn" onClick={() => setIsOpen(true)}>
                 상세보기
               </button>
               {isOpen && (
-                <div className="project_modal">
+                <div className={`project_modal ${isOpen ? "open" : ""}`}>
                   <iframe
                     src={src}
                     width="100%"
                     height="800"
-                    onLoad={() => setIsIframeLoading(true)}
+                    onLoad={() => setIsIframeLoading(false)}
                   />
 
-                  {isIframeLoading && (
-                    <button onClick={() => setIsOpen(false)}>X</button>
-                  )}
+                  <button onClick={() => setIsOpen(false)}>
+                    <IoIosClose />
+                  </button>
+                  {isIframeLoading && <div id="loading_text">로딩중...</div>}
                 </div>
               )}
             </div>

@@ -12,7 +12,10 @@
 
 .sub_project {
   display: flex;
-  align-items: center;
-  gap: 1em;
-  padding-top: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sub_title {
+  margin: 0;
 }

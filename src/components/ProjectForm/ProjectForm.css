@@ -49,11 +49,11 @@
 .project_description {
   background-color: #3f3d56;
   border-radius: 5px;
-  padding: 1em;
+  padding: 1.5em;
   width: 450px;
   z-index: 2;
-  font-size: 1.2em;
-  line-height: 1.2em;
+  font-size: 1em;
+  line-height: 1.5em;
   color: var(--text-cream);
   position: relative;
   white-space: pre-line;
@@ -71,6 +71,10 @@
   font-size: 1.4em;
   display: flex;
   gap: 1em;
+
+  & a {
+    cursor: pointer;
+  }
 }
 
 .project_icons a:hover {
@@ -114,10 +118,11 @@
 }
 
 .project_modal {
-  position: absolute;
+  position: fixed;
   z-index: 999;
-  top: 10%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 1000px;
 
   & button {
@@ -164,4 +169,13 @@
   left: 0;
   width: 100%;
   background-color: var(--color-pink);
+}
+
+#loading_text {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: var(--text-cream);
 }

@@ -1,70 +1,80 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 1em;
-
-  & img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
+  position: relative;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
-.card:hover {
-  .card_img {
-    transform: translateY(-50px);
-    & img {
-      border-radius: 10px 10px 0px 0px;
-    }
-  }
-  .card_inner {
-    opacity: 1;
-    transform: translateY(-50px);
-    border-radius: 0px 0px 10px 10px;
-  }
-}
-
-.card_img {
+.card_main {
+  background-color: #3f3d56;
   width: 300px;
-  height: 300px;
-  transform: translateY(0px);
-  transition: opacity 1s, transform 1s;
-}
-
-.card_inner {
-  width: 300px;
-  height: 300px;
-  background-color: var(--color-purple);
-  border: 1px solid var(--text-cream);
-
-  opacity: 0;
-  transform: translateY(-300px);
-  transition: opacity 1s, transform 1s;
+  height: 200px;
+  transition: 0.5s;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1em;
-  font-size: 1em;
+  position: absolute;
+  bottom: 0;
 
-  & h6 {
-    font-size: 1.2em;
+  .folder_icon {
+    font-size: 3em;
+  }
+
+  & p {
+    transition: 0.5s;
+    opacity: 1;
+    overflow: hidden;
+    line-height: 1.4em;
   }
 
   & ul {
     list-style: none;
     display: flex;
     gap: 1em;
-  }
-
-  .inner_icons {
-    display: flex;
-    gap: 1em;
+    transition: 0.5s;
+    overflow: hidden;
   }
 }
 
-.inner_icons a:hover {
-  color: var(--color-pink);
+.card_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card:hover {
+  .card_main {
+    height: 40px;
+    padding: 0em 1em;
+    bottom: 0;
+    justify-content: center;
+
+    .folder_icon {
+      font-size: 2em;
+    }
+
+    p {
+      opacity: 0;
+      height: 0;
+    }
+
+    ul {
+      opacity: 0;
+      height: 0;
+    }
+  }
+}
+
+.card_img {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }

@@ -9,7 +9,7 @@ import Layout from "../components/Layout/Layout";
 const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Cover />} />
+      {/* <Route path="/" element={<Cover />} /> */}
       <Route path="/" element={<Layout />}>
         <Route path="/home" element={<MainPage />} />
         <Route path="/about" element={<AboutPage />} />

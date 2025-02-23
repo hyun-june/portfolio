@@ -1,0 +1,19 @@
+body {
+  background-color: var(--color-purple);
+}
+.text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & span {
+    display: inline-block;
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(25) forwards;
+    border-right: 2px solid var(--text-black);
+    font-size: 3em;
+  }
+}

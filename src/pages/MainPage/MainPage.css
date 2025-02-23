@@ -14,8 +14,7 @@
   display: flex;
   align-items: center;
   opacity: 0;
-  animation: fadeIn 4s forwards;
-  animation-delay: 5s;
+  animation: fadeIn 2s forwards;
 }
 
 .main_info {
@@ -25,8 +24,7 @@
   letter-spacing: 1.2px;
   opacity: 0;
   gap: 2em;
-  animation: fadeIn 4s forwards;
-  animation-delay: 5s;
+  animation: fadeIn 2s forwards;
 
   & h1 {
     font-size: 4em;
@@ -83,20 +81,4 @@
 .git_icon:hover {
   color: var(--color-pink);
   transform: scale(1.2);
-}
-
-.main_text {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  & span {
-    display: inline-block;
-    font-size: 2em;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 5s steps(25) forwards;
-    border-right: 2px solid var(--text-black);
-    font-size: 3em;
-  }
 }

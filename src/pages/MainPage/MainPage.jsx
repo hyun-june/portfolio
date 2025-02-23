@@ -17,10 +17,6 @@ const MainPage = () => {
   }, []);
   return (
     <div className="main_container">
-      <div className="main_text">
-        <span>제 포트폴리오를 방문해 주셔서 진심으로 감사드립니다.</span>
-      </div>
-
       <div className="main_imgbox">
         <img src="images/캐릭터.png" alt="" />
       </div>

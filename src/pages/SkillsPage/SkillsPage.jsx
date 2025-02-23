@@ -15,8 +15,7 @@ const SkillsPage = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div>
-      <SubTitle title="Skills" />
-      <DotNavigation />
+      {/* <SubTitle title="Skills" /> */}
       <div className="skills_inner">
         <div>
           <ul className="skills_tab">

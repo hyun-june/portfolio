@@ -1,5 +1,4 @@
 import { CiFolderOn } from "react-icons/ci";
-
 import "./Card.css";
 
 const Card = ({ ...props }) => {

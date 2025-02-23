@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./DotNavigation.css";
 
 const dotList = ["Home", "About", "Skills", "Projects"];
@@ -15,10 +15,10 @@ const DotNavigation = () => {
           }`}
           key={index}
         >
-          <a href={`/${item}`} className="dot_circle"></a>
-          <a href={`/${item}`} className="dot_title">
+          <Link to={`/${item}`} className="dot_circle"></Link>
+          <Link to={`/${item}`} className="dot_title">
             {item}
-          </a>
+          </Link>
         </div>
       ))}
     </nav>

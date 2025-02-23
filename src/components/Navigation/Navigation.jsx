@@ -1,5 +1,5 @@
 import TabButton from "./../TabButton/TabButton";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navigation.css";
 
 const tabList = ["Home", "About", "Skills", "Projects"];
@@ -11,7 +11,7 @@ const Navigation = () => {
     <div>
       <nav className="nav_section">
         <div className="logo">
-          <a href="/">HJ</a>
+          <Link to="/">HJ</Link>
         </div>
 
         <div className="tab_list">

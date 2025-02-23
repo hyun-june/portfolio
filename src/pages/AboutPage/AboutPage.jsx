@@ -9,8 +9,7 @@ import "./AboutPage.css";
 const AboutPage = () => {
   return (
     <div>
-      <SubTitle title="About Me" />
-      <DotNavigation />
+      {/* <SubTitle title="About Me" /> */}
       <div className="about_info">
         <div className="about_photo">
           <img src="images/증명사진.jpg" alt="" />

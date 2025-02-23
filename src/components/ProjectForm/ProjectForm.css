@@ -89,7 +89,9 @@
   position: relative;
   flex: 1;
   cursor: pointer;
-  background-color: var(--color-purple);
+  background-color: var(--text-cream);
+  width: 490px;
+  height: 400px;
 
   & img {
     max-width: 500px;

@@ -22,7 +22,7 @@ const MainPage = () => {
       </div>
 
       <div className="main_imgbox">
-        <img src="/images/캐릭터.png" alt="" />
+        <img src="images/캐릭터.png" alt="" />
       </div>
       <div className="main_info">
         <h1>LEE HYUNJUN</h1>

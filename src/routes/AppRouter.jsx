@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import MainPage from "../pages/MainPage/MainPage";
 import Cover from "../pages/Cover/Cover";
 import AboutPage from "../pages/AboutPage/AboutPage";
@@ -9,12 +9,13 @@ import Layout from "../components/Layout/Layout";
 const AppRouter = () => {
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/Home" replace />} />
       {/* <Route path="/" element={<Cover />} /> */}
       <Route path="/" element={<Layout />}>
-        <Route path="/home" element={<MainPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/skills" element={<SkillsPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/Home" element={<MainPage />} />
+        <Route path="/About" element={<AboutPage />} />
+        <Route path="/Skills" element={<SkillsPage />} />
+        <Route path="/Projects" element={<ProjectsPage />} />
       </Route>
     </Routes>
   );

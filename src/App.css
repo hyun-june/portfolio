@@ -21,6 +21,16 @@ body {
   font-family: "S-CoreDream-3Light";
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--color-purple);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: #3f3d56;
+}
+
 @keyframes typing {
   0% {
     width: 0%;

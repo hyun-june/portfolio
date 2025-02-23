@@ -75,9 +75,9 @@ const CardsData = [
   {
     title: "포트폴리오",
     p: "설명테스트2",
-    skills: ["react", "css", "html", "dddd"],
+    skills: ["React"],
     img: "https://cdn.discordapp.com/attachments/1343190471454756946/1343201793080823931/image.png?ex=67bc69a6&is=67bb1826&hm=e4710ca4a4dac0409809f003d589a2b7053d91f93b8865cf3f1651a50ef56a6b&",
-    site: "http://localhost:3000",
+    site: "https://hyun-june.github.io/portfolio/",
   },
   {
     title: "쇼핑몰 페이지",

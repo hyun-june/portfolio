@@ -18,10 +18,8 @@ const ProjectsData = [
       "Axios",
       "MongoDB",
       "Mongoose",
-      "Github",
-      "Figma",
     ],
-    img: "https://cdn.discordapp.com/attachments/1305155148099752004/1342164427524276376/image.png?ex=67b8a387&is=67b75207&hm=0af115980e065ca2d27db140948ab4433f9eb8f725ee582e4988228c98b3caad&",
+    img: "https://cdn.discordapp.com/attachments/1343190471454756946/1343195320804180000/image.png?ex=67bc639f&is=67bb121f&hm=40d466e7ab8ec06c8c96b4f9656e50bb5beee4d1401fae53d0fff168d8bd9ae1&",
     git: "https://github.com/hyun-june/Nodejs-TeamProject2-3",
     site: "https://healthylife-2024.netlify.app/",
     figma:
@@ -43,11 +41,8 @@ const ProjectsData = [
       "Redux",
       "Youtube data api v3",
       "Spotify API",
-      "Bootstrap",
-      "Github",
-      "Figma",
     ],
-    img: "https://media.discordapp.net/attachments/1331608922775359560/1342755171926806609/85268e3bdb4c7f78.png?ex=67bac9b4&is=67b97834&hm=34105b6ca1d8dbaa26e8e50ea44d5d8e8df296e2ed6bd901ecda9a837e68508b&=&format=webp&quality=lossless&width=575&height=468",
+    img: "https://cdn.discordapp.com/attachments/1343190471454756946/1343201063804604456/image.png?ex=67bc68f9&is=67bb1779&hm=d3718c8239e5f77bc3ff882f14907d6871016acccbb25f50f0136d0d5e368ec7&",
     git: "https://github.com/hyun-june/react-study-teamProject-Radion",
     site: "https://react-teamproject-radion.netlify.app/",
     figma:
@@ -59,15 +54,8 @@ const ProjectsData = [
     description: `날씨 정보와 지도 서비스를 결합한 실시간 위치 기반 서비스입니다.
     사용자는 현재 위치 또는 특정 장소의 날씨를 쉽게 확인할 수 있어, 안전하고 효율적인 계획을 세울 수 있습니다.
     또한, 지도와 날씨 정보를 하나의 플랫폼에서 제공하여 사용자 경험을 극대화했습니다.`,
-    skills: [
-      "Javascript",
-      "KakaoMap API",
-      "OpenWeather API",
-      "Web Speech API",
-      "Github",
-      "Figma",
-    ],
-    img: "https://cdn.discordapp.com/attachments/1331608922775359560/1342764926514626591/image.png?ex=67bad2c9&is=67b98149&hm=b0d801139230432ea56838ab109171174e4e8f136ada771134b9a56b72db475e&",
+    skills: ["Javascript", "KakaoMap API", "OpenWeather API", "Web Speech API"],
+    img: "https://cdn.discordapp.com/attachments/1343190471454756946/1343201477497192550/image.png?ex=67bc695b&is=67bb17db&hm=df5b3c65badea7148868e2a1ee446f94ae89fd5ef94bdcee8577915e51c000f0&",
     git: "https://github.com/jaeyoung99-lee/CodingSister_JS_TeamProject",
     site: "https://codingsister-js-teamproject.netlify.app/",
     figma:
@@ -85,10 +73,10 @@ const CardsData = [
     site: "https://javascript-shootinggame.netlify.app/",
   },
   {
-    title: "test2",
+    title: "포트폴리오",
     p: "설명테스트2",
     skills: ["react", "css", "html", "dddd"],
-    img: "https://library.gabia.com/wp-content/uploads/2016/04/wix%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80-1.png",
+    img: "https://cdn.discordapp.com/attachments/1343190471454756946/1343201793080823931/image.png?ex=67bc69a6&is=67bb1826&hm=e4710ca4a4dac0409809f003d589a2b7053d91f93b8865cf3f1651a50ef56a6b&",
     site: "http://localhost:3000",
   },
   {

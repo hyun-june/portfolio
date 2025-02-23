@@ -89,6 +89,7 @@
   position: relative;
   flex: 1;
   cursor: pointer;
+  background-color: var(--color-purple);
 
   & img {
     max-width: 500px;

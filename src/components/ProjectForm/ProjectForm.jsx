@@ -45,13 +45,13 @@ const ProjectForm = ({ ...props }) => {
           </ul>
 
           <div className="project_icons">
-            <a href={git} target="blank">
+            <a href={git} target="_blank">
               <FaGithub />
             </a>
-            <a href={site} target="blank">
+            <a href={site} target="_blank">
               <GoLinkExternal />
             </a>
-            <a href={figma} target="blank">
+            <a href={figma} target="_blank">
               <FaFigma />
             </a>
             <div>
@@ -77,7 +77,7 @@ const ProjectForm = ({ ...props }) => {
           </div>
         </div>
         <div className="project_img">
-          <a href={link} target="blank">
+          <a href={site} target="_blank">
             <img src={img} alt="" />
           </a>
         </div>

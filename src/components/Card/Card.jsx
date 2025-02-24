@@ -4,7 +4,7 @@ import "./Card.css";
 const Card = ({ ...props }) => {
   return (
     <div className="card">
-      <a href={props.site} target="blank">
+      <a href={props.site} target="_blank">
         <div className="card_main">
           <div className="card_title">
             <CiFolderOn className="folder_icon" />

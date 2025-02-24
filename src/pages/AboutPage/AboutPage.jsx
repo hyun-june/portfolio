@@ -2,6 +2,7 @@ import SubTitle from "./../../components/SubTitle/SubTitle";
 import { CiMail } from "react-icons/ci";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+
 import "./AboutPage.css";
 
 const AboutPage = () => {

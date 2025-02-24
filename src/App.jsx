@@ -5,13 +5,12 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import SkillsPage from "./pages/SkillsPage/SkillsPage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import DotNavigation from "./components/DotNavigation/DotNavigation";
-import { useLocation } from "react-router-dom";
+import LinkNavigation from "./components/LinkNavigation/LinkNavigation";
 import "./App.css";
 
 function App() {
   const ref = [useRef(null), useRef(null), useRef(null), useRef(null)];
   const [visible, setVisible] = useState([false, false, false, false]);
-  const location = useLocation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,7 +38,7 @@ function App() {
           });
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.2 }
     );
 
     ref.map((ref) => {
@@ -55,7 +54,12 @@ function App() {
   return (
     <div>
       <WelcomePage />
-      <DotNavigation />
+
+      <div className="nav">
+        <DotNavigation />
+        <LinkNavigation />
+      </div>
+
       <section
         id="Home"
         className={`section ${visible[0] ? "visible" : ""}`}

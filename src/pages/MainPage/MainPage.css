@@ -56,13 +56,13 @@
   left: 4.3em;
 }
 
-.visible {
+.visibleText {
   opacity: 1;
   transform: rotateX(0deg);
   visibility: visible;
 }
 
-.hidden {
+.hiddenText {
   visibility: hidden;
   opacity: 0;
   transform: rotateX(-180deg);

@@ -6,8 +6,19 @@ import { IoIosClose } from "react-icons/io";
 import "./ProjectForm.css";
 
 const ProjectForm = ({ ...props }) => {
-  const { title, type, description, skills, git, link, img, src, site, figma } =
-    props;
+  const {
+    id,
+    title,
+    slogan,
+    type,
+    description,
+    skills,
+    git,
+    img,
+    src,
+    site,
+    figma,
+  } = props;
 
   const [isIframeLoading, setIsIframeLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -30,11 +41,37 @@ const ProjectForm = ({ ...props }) => {
     };
   }, []);
 
+  const pointText = (title, id) => {
+    const point = [
+      { chars: ["H", "L"], color: "#88dbff" },
+      { chars: ["R"], color: "#f0763c" },
+    ];
+
+    return title.split("").map((char, index) => {
+      let foundColor = null;
+
+      point.forEach((item) => {
+        if (item.chars.includes(char)) {
+          foundColor = item.color;
+        }
+      });
+
+      return foundColor ? (
+        <span key={index} style={{ color: foundColor }}>
+          {char}
+        </span>
+      ) : (
+        char
+      );
+    });
+  };
+
   return (
     <div ref={backgroundRef} className="project_section" {...props}>
       <div className={`project_inner ${type === "reverse" ? "reverse" : ""}`}>
         <div className="project_info">
-          <h4>{title}</h4>
+          <h4>{pointText(title, id)}</h4>
+          <h5 className="project_slogan">"{slogan}"</h5>
           <div className="project_description">
             <p> {description}</p>
           </div>
@@ -45,13 +82,13 @@ const ProjectForm = ({ ...props }) => {
           </ul>
 
           <div className="project_icons">
-            <a href={git} target="blank">
+            <a href={git} target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
-            <a href={site} target="blank">
+            <a href={site} target="_blank" rel="noopener noreferrer">
               <GoLinkExternal />
             </a>
-            <a href={figma} target="blank">
+            <a href={figma} target="_blank" rel="noopener noreferrer">
               <FaFigma />
             </a>
             <div>
@@ -77,7 +114,7 @@ const ProjectForm = ({ ...props }) => {
           </div>
         </div>
         <div className="project_img">
-          <a href={link} target="blank">
+          <a href={site} target="_blank" rel="noopener noreferrer">
             <img src={img} alt="" />
           </a>
         </div>

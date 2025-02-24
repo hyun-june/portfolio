@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { IoLogoFigma } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import "./MainPage.css";
@@ -11,7 +11,7 @@ const MainPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -28,7 +28,9 @@ const MainPage = () => {
           {texts.map((text, i) => (
             <p
               key={i}
-              className={`text_item ${i === index ? "visible" : "hidden"}`}
+              className={`text_item ${
+                i === index ? "visibleText" : "hiddenText"
+              }`}
             >
               {text}
             </p>

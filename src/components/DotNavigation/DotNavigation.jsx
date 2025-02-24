@@ -6,7 +6,7 @@ const dotList = ["Home", "About", "Skills", "Projects"];
 
 const DotNavigation = () => {
   const location = useLocation();
-  console.log(location);
+
   useEffect(() => {
     if (location.hash) {
       const targetSection = document.querySelector(location.hash);

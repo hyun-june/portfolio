@@ -1,12 +1,13 @@
 import SubTitle from "./../../components/SubTitle/SubTitle";
-import DotNavigation from "./../../components/DotNavigation/DotNavigation";
 import Card from "./../../components/Card/Card";
 import ProjectForm from "../../components/ProjectForm/ProjectForm";
+import { useEffect, useRef, useState } from "react";
 import "./ProjectsPage.css";
 
 const ProjectsData = [
   {
     title: "HealthyLife2024",
+    slogan: "나만의 건강 관리와 SNS 기능을 한 곳에서.",
     description: `사용자의 운동량과 섭취 및 소비 칼로리를 한곳에서 관리할 수 있는 서비스입니다.
                   기존 자기 관리 앱과 차별화하여, SNS 기능을 추가해 게시물 작성과 댓글을 통해 다른 사용자들과 소통할 수 있도록 했습니다.
                   또한, 웹앱 형태로 제작해 모바일에서도 편리하게 접근할 수 있도록 제공했습니다.`,
@@ -28,6 +29,7 @@ const ProjectsData = [
   },
   {
     title: "Radion",
+    slogan: "원하는 음악과 추천 음악을 쉽게 즐기세요!",
     description: `"Radio"와 "On"이 결합된 단어로,
                   원하는 음악을 쉽게 들을 수 있는 서비스입니다. 
                   음악 추천과 검색 기능을 제공하며,
@@ -51,6 +53,7 @@ const ProjectsData = [
   },
   {
     title: "지오웨더(GeoWeather)",
+    slogan: "실시간 날씨와 현재 위치 기반 서비스",
     description: `날씨 정보와 지도 서비스를 결합한 실시간 위치 기반 서비스입니다.
     사용자는 현재 위치 또는 특정 장소의 날씨를 쉽게 확인할 수 있어, 안전하고 효율적인 계획을 세울 수 있습니다.
     또한, 지도와 날씨 정보를 하나의 플랫폼에서 제공하여 사용자 경험을 극대화했습니다.`,
@@ -89,37 +92,108 @@ const CardsData = [
 ];
 
 const ProjectsPage = () => {
+  const [visibleElements, setVisibleElements] = useState([]);
+  const [subVisible, setSubVisible] = useState(false);
+  const elementsRef = useRef([]);
+  const subRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === subRef.current) {
+            setSubVisible(entry.isIntersecting);
+          }
+          if (entry.isIntersecting) {
+            setVisibleElements((prev) => {
+              if (!prev.includes(entry.target)) {
+                return [...prev, entry.target];
+              }
+              return prev;
+            });
+          } else {
+            setVisibleElements((prev) =>
+              prev.filter((el) => el !== entry.target)
+            );
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    elementsRef.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    if (subRef.current) {
+      observer.observe(subRef.current);
+    }
+
+    return () => {
+      elementsRef.current.forEach((el) => {
+        if (el) observer.unobserve(el);
+      });
+
+      if (subRef.current) {
+        observer.unobserve(subRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="projects_page_section">
       <SubTitle title="Projects" />
       <div className="main_project">
-        {ProjectsData.map((project, index) => (
-          <ProjectForm
-            key={index}
-            img={project.img}
-            title={project.title}
-            description={project.description}
-            skills={project.skills}
-            git={project.git}
-            site={project.site}
-            type={index % 2 === 0 ? "" : "reverse"}
-            src={project.src}
-            figma={project.figma}
-          />
-        ))}
+        {ProjectsData.map((project, index) => {
+          const animationClass = index % 2 === 0 ? "left" : "right";
+
+          return (
+            <div
+              key={index}
+              ref={(el) => (elementsRef.current[index] = el)}
+              className={`project_form ${animationClass} ${
+                visibleElements.includes(elementsRef.current[index])
+                  ? "visible"
+                  : ""
+              }`}
+            >
+              <ProjectForm
+                img={project.img}
+                title={project.title}
+                description={project.description}
+                skills={project.skills}
+                git={project.git}
+                site={project.site}
+                type={index % 2 === 0 ? "" : "reverse"}
+                src={project.src}
+                figma={project.figma}
+                id={index}
+                slogan={project.slogan}
+              />
+            </div>
+          );
+        })}
       </div>
-      <SubTitle title="Sub_projects" className="sub_title" />
-      <div className="sub_project">
-        {CardsData.map((card, index) => (
-          <Card
-            key={index}
-            img={card.img}
-            title={card.title}
-            description={card.description}
-            skills={card.skills}
-            site={card.site}
-          />
-        ))}
+      <div
+        ref={subRef}
+        className={`
+          subSection ${subVisible ? "visible" : ""}`}
+      >
+        <SubTitle title="Sub_projects" className="sub_title" />
+        <div className="sub_project">
+          {CardsData.map((card, index) => (
+            <Card
+              key={index}
+              img={card.img}
+              title={card.title}
+              description={card.description}
+              skills={card.skills}
+              site={card.site}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

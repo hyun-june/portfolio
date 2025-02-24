@@ -31,6 +31,24 @@ body::-webkit-scrollbar-thumb {
   background-color: #3f3d56;
 }
 
+.section {
+  max-width: 1280px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  color: var(--text-cream);
+}
+
+.section.visible {
+  opacity: 1;
+}
+
 @keyframes typing {
   0% {
     width: 0%;

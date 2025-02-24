@@ -1,7 +1,7 @@
 .main_container {
   display: flex;
   justify-content: center;
-  margin-top: 5em;
+
   height: 100%;
 
   & img {
@@ -15,6 +15,7 @@
   align-items: center;
   opacity: 0;
   animation: fadeIn 2s forwards;
+  animation-delay: 5s;
 }
 
 .main_info {
@@ -25,7 +26,7 @@
   opacity: 0;
   gap: 2em;
   animation: fadeIn 2s forwards;
-
+  animation-delay: 5s;
   & h1 {
     font-size: 4em;
   }

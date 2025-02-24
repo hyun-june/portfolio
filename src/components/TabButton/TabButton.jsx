@@ -4,7 +4,7 @@ import "./TabButton.css";
 const TabButton = ({ item, className, ...props }) => {
   const navigate = useNavigate();
   const handleMove = ({ item }) => {
-    navigate(`/${item}`);
+    navigate(`#${item}`);
   };
   return (
     <div

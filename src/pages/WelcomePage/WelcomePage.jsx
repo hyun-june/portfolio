@@ -1,16 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import "./WelcomePage.css";
-import { useEffect } from "react";
 
 const WelcomePage = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/Home");
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [navigate]);
   return (
     <div>
       <div className="text">

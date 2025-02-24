@@ -91,7 +91,7 @@ const CardsData = [
 const ProjectsPage = () => {
   return (
     <div className="projects_page_section">
-      {/* <SubTitle title="Projects" /> */}
+      <SubTitle title="Projects" />
       <div className="main_project">
         {ProjectsData.map((project, index) => (
           <ProjectForm

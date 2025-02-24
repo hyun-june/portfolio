@@ -3,12 +3,14 @@ import "./Layout.css";
 import Navigation from "./../Navigation/Navigation";
 import DotNavigation from "../DotNavigation/DotNavigation";
 import SubTitle from "../SubTitle/SubTitle";
+import LinkNavigation from "./../LinkNavigation/LinkNavigation";
 
 const Layout = () => {
   const location = useLocation();
   return (
     <div className="layout">
       <Navigation />
+      <LinkNavigation />
       <main>
         <div className="container">
           {location.pathname !== "/Home" && (
@@ -17,7 +19,7 @@ const Layout = () => {
 
           <Outlet />
         </div>
-        {location.pathname !== "/Home" && <DotNavigation />}
+        <DotNavigation />
       </main>
     </div>
   );

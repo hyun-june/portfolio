@@ -6,14 +6,15 @@
 .main_project {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3em;
   margin-bottom: 6em;
 }
 
 .sub_project {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 5em;
 }
 
 .sub_title {

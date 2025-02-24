@@ -18,7 +18,7 @@ const MainPage = () => {
   return (
     <div className="main_container">
       <div className="main_imgbox">
-        <img src="images/캐릭터.png" alt="" />
+        <img src={`${process.env.PUBLIC_URL}/images/캐릭터.png`} alt="" />
       </div>
       <div className="main_info">
         <h1>LEE HYUNJUN</h1>

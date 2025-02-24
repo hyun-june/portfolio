@@ -6,8 +6,19 @@ import { IoIosClose } from "react-icons/io";
 import "./ProjectForm.css";
 
 const ProjectForm = ({ ...props }) => {
-  const { title, type, description, skills, git, link, img, src, site, figma } =
-    props;
+  const {
+    title,
+    type,
+    slogan,
+    description,
+    skills,
+    git,
+    link,
+    img,
+    src,
+    site,
+    figma,
+  } = props;
 
   const [isIframeLoading, setIsIframeLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -30,11 +41,36 @@ const ProjectForm = ({ ...props }) => {
     };
   }, []);
 
+  const pointText = (title) => {
+    const point = [
+      { chars: ["H", "L"], color: "#88dbff" },
+      { chars: ["R"], color: "#f0763c" },
+    ];
+
+    return title.split("").map((char, index) => {
+      let foundColor = null;
+
+      point.forEach((item) => {
+        if (item.chars.includes(char)) {
+          foundColor = item.color;
+        }
+      });
+
+      return foundColor ? (
+        <span key={index} style={{ color: foundColor }}>
+          {char}
+        </span>
+      ) : (
+        char
+      );
+    });
+  };
+
   return (
     <div ref={backgroundRef} className="project_section" {...props}>
       <div className={`project_inner ${type === "reverse" ? "reverse" : ""}`}>
         <div className="project_info">
-          <h4>{title}</h4>
+          <h4>{pointText(title)}</h4>
           <div className="project_description">
             <p> {description}</p>
           </div>

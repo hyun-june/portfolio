@@ -1,0 +1,27 @@
+.Link_nav {
+  position: fixed;
+  bottom: 0;
+  left: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  z-index: 1;
+
+  & a {
+    font-size: 1.2em;
+    color: var(--text-cream);
+  }
+
+  & a:hover {
+    color: var(--color-pink);
+    transition: 0.5s;
+  }
+}
+
+.Link_nav::after {
+  content: "";
+  width: 2px;
+  height: 10em;
+  background-color: var(--color-pink);
+}

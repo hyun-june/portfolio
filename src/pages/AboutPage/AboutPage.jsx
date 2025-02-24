@@ -12,7 +12,7 @@ const AboutPage = () => {
       {/* <SubTitle title="About Me" /> */}
       <div className="about_info">
         <div className="about_photo">
-          <img src="images/증명사진.jpg" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/images/증명사진.jpg`} alt="" />
           <div id="photo_box"></div>
         </div>
         <div className="about_user">

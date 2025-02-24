@@ -1,5 +1,3 @@
-import SubTitle from "./../../components/SubTitle/SubTitle";
-import DotNavigation from "./../../components/DotNavigation/DotNavigation";
 import { useState } from "react";
 import TabContent from "../../components/TabContent/TabContent";
 import "./SkillsPage.css";
@@ -15,7 +13,6 @@ const SkillsPage = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div>
-      {/* <SubTitle title="Skills" /> */}
       <div className="skills_inner">
         <div>
           <ul className="skills_tab">

@@ -1,5 +1,4 @@
 import SubTitle from "./../../components/SubTitle/SubTitle";
-import DotNavigation from "./../../components/DotNavigation/DotNavigation";
 import Card from "./../../components/Card/Card";
 import ProjectForm from "../../components/ProjectForm/ProjectForm";
 import "./ProjectsPage.css";
@@ -86,7 +85,7 @@ const CardsData = [
     title: "포트폴리오",
     description: "Brittany Chiang의 포트폴리오를 참고하여 제작했습니다.",
     skills: ["React"],
-    img: "https://res.cloudinary.com/dkuk1vsqa/image/upload/v1740407659/image_efjzlp.png",
+    img: "https://res.cloudinary.com/dkuk1vsqa/image/upload/v1740408819/image_mkg8r7.png",
     site: "https://hyun-june.github.io/portfolio/",
   },
   {
@@ -101,7 +100,6 @@ const CardsData = [
 const ProjectsPage = () => {
   return (
     <div className="projects_page_section">
-      {/* <SubTitle title="Projects" /> */}
       <div className="main_project">
         {ProjectsData.map((project, index) => (
           <ProjectForm

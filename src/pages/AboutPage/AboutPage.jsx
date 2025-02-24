@@ -1,15 +1,11 @@
-import SubTitle from "./../../components/SubTitle/SubTitle";
-import DotNavigation from "./../../components/DotNavigation/DotNavigation";
 import { CiMail } from "react-icons/ci";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
-
 import "./AboutPage.css";
 
 const AboutPage = () => {
   return (
     <div>
-      {/* <SubTitle title="About Me" /> */}
       <div className="about_info">
         <div className="about_photo">
           <img src={`${process.env.PUBLIC_URL}/images/증명사진.jpg`} alt="" />

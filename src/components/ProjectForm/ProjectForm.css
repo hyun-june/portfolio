@@ -10,6 +10,12 @@
   max-height: 500px;
 }
 
+.project_slogan {
+  font-style: italic;
+  font-size: 1.3em;
+  margin: 0.5em 0em;
+}
+
 .reverse {
   flex-direction: row-reverse;
   text-align: right;

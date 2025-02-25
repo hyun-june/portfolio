@@ -113,6 +113,7 @@ const ProjectsPage = () => {
             type={index % 2 === 0 ? "" : "reverse"}
             src={project.src}
             figma={project.figma}
+            slogan={project.slogan}
           />
         ))}
       </div>
